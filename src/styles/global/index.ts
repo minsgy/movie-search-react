@@ -5,11 +5,11 @@ const globalStyle = createGlobalStyle`
     ${reset}
 
     html, 
-    body {
-        font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-        font-size: 14px;
-        font-weight: 500;
+    body,
+    #root {
+        font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
         background-color: white;
+        height: 100%;
     }
     *{
         box-sizing: border-box;
