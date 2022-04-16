@@ -4,15 +4,14 @@
     "paths": {
       "@assets/*": ["src/assets/*"],
       "@pages": ["src/pages"],
-      "@layouts": ["src/layouts"],
+      "@hooks": ["src/hooks"],
+      "@lib/*": ["src/lib/*"],
+      "@layouts/*": ["src/layouts/*"],
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
       "@routes/*": ["src/routes/*"],
-      "@styles/*": ["src/styles/*"],
-      "@utils/*": ["src/utils/*"],
       "@mocks/*": ["src/mocks/*"],
-      "@types/*": ["src/types/*"],
-      "@hooks/*": ["src/hooks/*"],
+      "@interfaces/*": ["src/interfaces/*"],
       "@store/*": ["src/store/*"]
     }
   }
