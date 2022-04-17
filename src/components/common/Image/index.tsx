@@ -42,7 +42,7 @@ const onIntersection: IntersectionObserverCallback = (entries, observer) => {
 
 const Image = ({
   lazy,
-  threshold = 0.7,
+  threshold = 0.5,
   src,
   placeholder = PlaceHolderImage,
   alt,
