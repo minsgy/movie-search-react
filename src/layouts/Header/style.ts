@@ -7,7 +7,7 @@ const HeaderContainer = styled.header`
   height: ${HEADER_HEIGHT}px;
   z-index: 5;
   padding: 0 ${GRID_PADDING}px;
-  background-color: ${({ theme }) => theme.color.bgColor};
+  background-color: rgba(0, 0, 0, 0.8);
 `;
 
 const InnerContainer = styled.div`
@@ -19,7 +19,8 @@ const InnerContainer = styled.div`
 `;
 
 const Content = styled.div`
-  display: flex;
+  flex: 1;
+  text-align: right;
 `;
 
 const Title = styled.h1`
