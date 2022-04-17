@@ -15,9 +15,9 @@ const common = {
 // 확장성을 고려한 테마 정의
 const darkTheme: DefaultTheme = {
   color: {
-    bgColor: '#1a1a1a',
+    bgColor: '#333',
     textColor: '#ffffff',
-    pointColor: 'rgb(115, 0, 0)',
+    pointColor: '#d43919',
   } as const,
   common,
 };
