@@ -1,14 +1,16 @@
 import { RecoilRoot } from 'recoil';
-// import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import Routes from './routes';
-import GlobalStyle from '@styles/global';
+import GlobalStyle from '@lib/styles/global';
+import theme from '@lib/styles/common/theme';
 import { QueryClient, QueryClientProvider } from 'react-query';
+
 const App = () => {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
+        // @NOTE: 무분별한 refetch를 막기 위해 false로 설정
         refetchOnMount: false,
-        refetchOnReconnect: false,
         refetchOnWindowFocus: false,
       },
     },
@@ -17,10 +19,10 @@ const App = () => {
   return (
     <RecoilRoot>
       <QueryClientProvider client={queryClient}>
-        {/* <ThemeProvider> */}
-        <Routes />
-        <GlobalStyle />
-        {/* </ThemeProvider> */}
+        <ThemeProvider theme={theme['dark']}>
+          <Routes />
+          <GlobalStyle />
+        </ThemeProvider>
       </QueryClientProvider>
     </RecoilRoot>
   );
