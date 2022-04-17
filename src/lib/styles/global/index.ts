@@ -10,8 +10,12 @@ const globalStyle = createGlobalStyle`
         font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
         color: ${({ theme }) => theme.color.textColor};
         height: 100%;
+        &::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera*/
+        }
     }
     *{
+        font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
         box-sizing: border-box;
     }
     a,
@@ -32,6 +36,7 @@ const globalStyle = createGlobalStyle`
         padding: 0;
     }
     button {
+        
         border: none;
         padding: 0;
     }
