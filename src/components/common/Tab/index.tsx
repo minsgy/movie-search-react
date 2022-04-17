@@ -8,7 +8,10 @@ export interface ITabProperties {
 
 const Tab = ({ tabList, ...props }: ITabProperties) => {
   const renderTabItems = useMemo(
-    () => tabList.map((item, index) => <TabItem key={index} title={item.title} path={item.path} />),
+    () =>
+      tabList.map((item, index) => (
+        <TabItem key={index} icon={item.icon} title={item.title} path={item.path} />
+      )),
     [tabList],
   );
 

@@ -4,26 +4,31 @@ import { Link } from 'react-router-dom';
 const TabContainer = styled.nav`
   display: flex;
   justify-content: center;
-  border-radius: 12px 12px 0 0;
   overflow: hidden;
+  background-color: #000;
 `;
 
 const TabItemContainer = styled(Link)`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
   flex: 1;
-  height: 40px;
+  height: 60px;
+  text-align: center;
+  border: 2px solid ${({ theme }) => theme.color.pointColor};
+  border-bottom: none;
+
+  &.active {
+    background-color: ${({ theme }) => theme.color.pointColor};
+  }
 `;
 
 const Title = styled.span`
-  font-size: 14px;
-  padding-bottom: 6px;
+  font-size: 0.6rem;
+  margin-top: 6px;
+  color: #fff;
   font-weight: normal;
-  &.active {
-    border-bottom: 1px solid red;
-  }
 `;
 
 export { TabContainer, TabItemContainer, Title };
