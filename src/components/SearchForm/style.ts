@@ -2,11 +2,10 @@ import styled from 'styled-components';
 
 const ChatFormWrapper = styled.div`
   display: flex;
-  border: 2px solid rgb(115, 0, 0);
+  border: 2px solid ${({ theme }) => theme.color.pointColor};
   background-color: transparent;
   color: ${({ theme }) => theme.color.textColor};
   padding: 4px 6px;
-  border-radius: 4px;
   &.focus {
     border: 2px solid ${({ theme }) => theme.color.textColor};
   }

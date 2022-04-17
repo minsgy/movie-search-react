@@ -1,15 +1,12 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import { ChatFormWrapper, StyledInput, SearchBtn } from './style';
 import { useKey } from '@hooks';
 import Icon from '@components/common/Icon';
 import { useSearchParams } from 'react-router-dom';
-import { useSetRecoilState } from 'recoil';
-import { searchState } from '@store/search';
 
 const SearchForm = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, setSearchParams] = useSearchParams();
-  const setSearch = useSetRecoilState(searchState);
   const [keyword, setKeyword] = useState<string>('');
   const [isFocusInput, setIsFocusInput] = useState<boolean>(false);
 
@@ -23,7 +20,7 @@ const SearchForm = () => {
       return;
     }
     setSearchParams({ tab: 'search', q: keyword });
-    setSearch(keyword);
+    // setSearch(keyword);
     setKeyword(''); // 검색 창 데이터 초기화
   };
 
@@ -54,10 +51,10 @@ const SearchForm = () => {
         onBlur={onFocusInput}
       />
       <SearchBtn onClick={onClickSearch}>
-        <Icon name="search-btn" alt="영화 검색하기" size={20} />
+        <Icon name="search" alt="영화 검색하기" size={20} />
       </SearchBtn>
     </ChatFormWrapper>
   );
 };
 
-export default SearchForm;
+export default memo(SearchForm);
