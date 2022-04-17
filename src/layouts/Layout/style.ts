@@ -6,7 +6,7 @@ const StyledLayout = styled.main`
   padding: ${HEADER_HEIGHT}px ${GRID_PADDING}px 0;
   min-height: 100%;
   /* background-color: #e4e4e4; */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${SplashImage});
+  background-image: url(${SplashImage});
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
