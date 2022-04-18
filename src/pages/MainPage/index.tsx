@@ -39,6 +39,7 @@ const MainPage = () => {
           : { query: searchKeyword, page: lastPage.page + 1 };
         return nextParams;
       },
+      staleTime: 60 * 1000 * 5, // @NOTE: 5분간 refetch 방지
       retry: 0,
     },
   );
