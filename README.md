@@ -10,7 +10,7 @@
 
 ## 프로젝트 및 배포 URL
 
-해당 [링크]()를 통해 DEMO 확인이 가능합니다.
+해당 [링크](https://minsgy-cinema-react.netlify.app/)를 통해 DEMO 확인이 가능합니다.
 
 ```text
 npm install
@@ -237,8 +237,7 @@ yarn start
 6. 즐겨찾기 Drag&Drop 구현 (추가구현)
 
    - 관련 라이브러리를 사용하지 않고 드래그앤드롭을 구현해보았습니다.
-   - 즐겨찾기 탭에서만 사용 할 수 있도록 `draggable` 설정을 하였고, 관련 된 web API를 활용하여 구현했습니다.
-   - on
+   - 즐겨찾기 탭에서만 사용 할 수 있도록 `draggable` 설정을 하였고, 관련 된 Drag&Drop API를 활용하여 구현했습니다.
 
    ```tsx
    // OnDrop 이벤트 활성화를 위해서 정의
@@ -356,4 +355,4 @@ yarn start
 
 8. `useInfinityQuery`의 에러 처리
 
-- `useInfinityQuery`에 에러 처리를 전역적으로 Toast 메세지 방식을 적용할 지 어떻게 보여줄 지 고민했지만 시간이 별로 없어 구현하지 못했습니다.
+   - `useInfinityQuery`에 에러 처리를 전역적으로 Toast 메세지 방식을 적용할 지 어떻게 보여줄 지 고민했지만 시간이 별로 없어 구현하지 못했습니다.
