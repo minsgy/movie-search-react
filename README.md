@@ -13,13 +13,13 @@
 해당 [링크](https://minsgy-cinema-react.netlify.app/)를 통해 DEMO 확인이 가능합니다.
 
 ```text
-npm install
-yarn install
+  npm install
+  yarn install
 ```
 
-```
-npm run start
-yarn start
+```text
+  npm run start
+  yarn start
 ```
 
 ## 기술 스택
@@ -30,20 +30,20 @@ yarn start
 - `craco`를 선택하여 CRA로 만들어진 프로젝트의 webpack 설정을 override해 `alias` 설정을 해주었습니다.
 
 ```json
-"typescript": "^4.6.3",
-"@craco/craco": "^6.4.3",
-"craco-alias": "^3.0.1",
-"react": "^17.0.2"
-"react-router-dom": "6.2.2",
-"recoil": "^0.7.0",
-"recoil-persist": "^4.1.0",
-"styled-components": "^5.3.5",
-"styled-reset": "^4.3.4",
-"axios": "^0.26.1",
-"recoil": "^0.6.1",
-"recoil-persist": "^4.1.0",
-"prettier": "^2.6.2"
-"eslint": "^8.13.0",
+  "typescript": "^4.6.3",
+  "@craco/craco": "^6.4.3",
+  "craco-alias": "^3.0.1",
+  "react": "^17.0.2"
+  "react-router-dom": "6.2.2",
+  "recoil": "^0.7.0",
+  "recoil-persist": "^4.1.0",
+  "styled-components": "^5.3.5",
+  "styled-reset": "^4.3.4",
+  "axios": "^0.26.1",
+  "recoil": "^0.6.1",
+  "recoil-persist": "^4.1.0",
+  "prettier": "^2.6.2"
+  "eslint": "^8.13.0",
 ```
 
 ## 구현 리스트
@@ -325,6 +325,7 @@ yarn start
    - 그렇지만 포스터 크기가 다양하다보니 고정 된 값을 지정하게 된다면 포스터 해상도가 희미해지는 문제가 발생했습니다.
    - 그래서 사용자에게 정보는 확실하게 전달하는 게 맞다 생각하여 `Lazy Loading`으로 타협해 이미지 최적화를 했습니다.
    - 제공되는 이미지 포스터의 크기를 고려하여 가변적인 이미지가 나오도록 따로 높이 값을 지정하지 않고 깨지지 않는 이미지를 제공합니다.
+   - 해당 API가 이미지가 많이 나와서 어떻게 이미지를 최적화할 지 고민을 많이했었습니다.
 
 4. API key를 어떻게 감추지?
 
