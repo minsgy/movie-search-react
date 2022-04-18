@@ -1,26 +1,25 @@
-import { useState, memo } from 'react';
+import React, { useState, useRef, memo } from 'react';
 import { ChatFormWrapper, StyledInput, SearchBtn } from './style';
-import { useKey } from '@hooks';
 import Icon from '@components/common/Icon';
 import { useSearchParams } from 'react-router-dom';
 
 const SearchForm = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, setSearchParams] = useSearchParams();
-  const [keyword, setKeyword] = useState<string>('');
+  const inputRef = useRef<HTMLInputElement>(null);
   const [isFocusInput, setIsFocusInput] = useState<boolean>(false);
 
-  const onChangeKeyword = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = e.target;
-    setKeyword(value);
-  };
-
-  const onClickSearch = () => {
-    if (keyword === '') {
+  const onSubmitSearch = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const { value } = e.currentTarget.keyword;
+    if (value === '') {
       return;
     }
-    setSearchParams({ tab: 'search', q: keyword });
-    setKeyword(''); // 검색 창 데이터 초기화
+    setSearchParams({ tab: 'search', q: value });
+    if (inputRef.current) {
+      // INPUT 값 초기화
+      inputRef.current.value = '';
+    }
   };
 
   const onFocusInput = (e: React.FocusEvent<HTMLInputElement>) => {
@@ -38,18 +37,16 @@ const SearchForm = () => {
     }
   };
 
-  useKey('keydown', 'Enter', onClickSearch); // 전역 윈도우에서 Enter key 입력시 검색 실행
-
   return (
-    <ChatFormWrapper className={isFocusInput ? 'focus' : ''}>
+    <ChatFormWrapper onSubmit={onSubmitSearch} className={isFocusInput ? 'focus' : ''}>
       <StyledInput
+        name="keyword"
+        ref={inputRef}
         type="text"
-        value={keyword}
-        onChange={onChangeKeyword}
         onFocus={onFocusInput}
         onBlur={onFocusInput}
       />
-      <SearchBtn onClick={onClickSearch}>
+      <SearchBtn type="submit">
         <Icon name="search" alt="영화 검색하기" size={20} />
       </SearchBtn>
     </ChatFormWrapper>
