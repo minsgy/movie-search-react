@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ChatFormWrapper = styled.div`
+const ChatFormWrapper = styled.form`
   display: flex;
   border: 2px solid ${({ theme }) => theme.color.pointColor};
   background-color: transparent;
