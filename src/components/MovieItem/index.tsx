@@ -59,10 +59,6 @@ const MovieItem = ({
       onDragEnd={onDragEnd}
       onDragStart={_onDragStart}
       onDragOver={onDragOver}
-      // onTouchStart={_onDragStart}
-      // onTouchEnd={onDragEnd}
-      // onTouchCancel={onDrop}
-      // onTouchMove={onDragOver}
     >
       <ImageContainer>
         <Image mode="fill" src={posterUrl} alt="영화 포스터" lazy />

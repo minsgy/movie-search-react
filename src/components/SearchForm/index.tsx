@@ -20,7 +20,6 @@ const SearchForm = () => {
       return;
     }
     setSearchParams({ tab: 'search', q: keyword });
-    // setSearch(keyword);
     setKeyword(''); // 검색 창 데이터 초기화
   };
 
