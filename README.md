@@ -8,7 +8,7 @@
 🖱 즐겨찾기 리스트를 Drag&Drop해서 원하는 위치에 둘 수 있어요.(PC)
 ```
 
-## 프로젝트 및 배포 URL
+## 프로젝트 실행 및 배포 URL
 
 해당 [링크](https://minsgy-cinema-react.netlify.app/)를 통해 DEMO 확인이 가능합니다.
 
